@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Submit a maintenance work order for Dahcotah View Apartments, Burnsville, MN.">
+<title>Work Order Request — Dahcotah View Apartments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #14263f;
+    --navy-deep: #0c1a2e;
+    --navy-soft: #22385c;
+    --gold: #c9a227;
+    --gold-bright: #e0bc4a;
+    --gold-pale: #f3e8c4;
+    --paper: #f7f5ef;
+    --card: #ffffff;
+    --ink: #1c2431;
+    --ink-soft: #55617a;
+    --line: #e2ddd0;
+    --emergency: #a83232;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    top: 0 !important;
+  }
+  .goog-te-banner-frame, .skiptranslate iframe.skiptranslate { display: none !important; }
+  body > .skiptranslate { display: none !important; }
+
+  /* Language bar */
+  .lang-bar { position: sticky; top: 0; z-index: 50; background: var(--navy-deep); border-bottom: 3px solid var(--gold); padding: 10px 16px; }
+  .lang-bar-inner { max-width: 860px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .lang-label { color: var(--gold-bright); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-right: 4px; }
+  .lang-btn { background: transparent; border: 1px solid rgba(224,188,74,0.45); color: #f2eee2; font-family: inherit; font-size: 13px; font-weight: 500; padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+  .lang-btn:hover { background: var(--navy-soft); border-color: var(--gold-bright); }
+  .lang-btn.active { background: var(--gold); border-color: var(--gold); color: var(--navy-deep); font-weight: 700; }
+  #google_translate_element { margin-left: auto; }
+  #google_translate_element .goog-te-gadget { font-size: 0; color: transparent; }
+  #google_translate_element select { font-family: inherit; font-size: 13px; padding: 5px 8px; border-radius: 6px; border: 1px solid rgba(224,188,74,0.45); background: var(--navy-soft); color: #f2eee2; max-width: 170px; }
+
+  /* Header */
+  header { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%); color: #f2eee2; padding: 40px 20px 32px; text-align: center; position: relative; }
+  header::after { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 120px; height: 4px; background: var(--gold); }
+  .property-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 10px; }
+  header h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(28px, 6vw, 40px); line-height: 1.15; }
+  .property-sub { margin-top: 10px; font-size: 14px; color: #c4cddc; }
+
+  /* Nav */
+  .site-nav { background: var(--navy); border-bottom: 3px solid var(--gold); }
+  .site-nav-inner { max-width: 860px; margin: 0 auto; display: flex; }
+  .site-nav a { color: #dfe5ee; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px 18px; letter-spacing: 0.03em; }
+  .site-nav a:hover { background: var(--navy-soft); color: var(--gold-bright); }
+  .site-nav a.current { background: var(--gold); color: var(--navy-deep); }
+
+  main { max-width: 700px; margin: 0 auto; padding: 32px 16px 64px; }
+
+  /* Emergency callout */
+  .emergency-box {
+    background: #fdf1f1; border: 1px solid #e6b8b8; border-left: 5px solid var(--emergency);
+    border-radius: 8px; padding: 16px 18px; margin-bottom: 28px; font-size: 14.5px;
+  }
+  .emergency-box strong { color: var(--emergency); }
+
+  /* Form */
+  .form-card { background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--gold); border-radius: 10px; padding: 28px 26px; box-shadow: 0 2px 14px rgba(20,38,63,0.07); }
+  .form-card h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 24px; color: var(--navy); margin-bottom: 6px; }
+  .form-intro { font-size: 14px; color: var(--ink-soft); margin-bottom: 22px; }
+  label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin: 16px 0 5px; letter-spacing: 0.02em; }
+  label .req { color: var(--emergency); }
+  input[type="text"], input[type="tel"], input[type="email"], select, textarea {
+    width: 100%; font-family: inherit; font-size: 15px; padding: 10px 12px;
+    border: 1px solid #cfc9ba; border-radius: 6px; background: #fdfcf9; color: var(--ink);
+  }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); border-color: var(--gold); }
+  textarea { min-height: 120px; resize: vertical; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 520px) { .two-col { grid-template-columns: 1fr; } }
+  .radio-row { display: flex; gap: 18px; margin-top: 6px; font-size: 15px; }
+  .radio-row label { display: flex; align-items: center; gap: 6px; font-weight: 500; margin: 0; color: var(--ink); }
+  .submit-btn {
+    display: block; width: 100%; margin-top: 26px; background: var(--navy); color: var(--gold-bright);
+    font-family: inherit; font-size: 16px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 14px; border: none; border-radius: 8px; cursor: pointer;
+  }
+  .submit-btn:hover { background: var(--navy-soft); }
+  .fine-print { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; text-align: center; }
+
+  footer { background: var(--navy-deep); color: #aab6c9; text-align: center; font-size: 13px; padding: 26px 16px; line-height: 1.8; margin-top: 40px; }
+  footer strong { color: #f2eee2; }
+</style>
+</head>
+<body>
+
+<nav class="lang-bar" aria-label="Translate this page">
+  <div class="lang-bar-inner">
+    <span class="lang-label">Translate</span>
+    <button class="lang-btn" data-lang="en" onclick="setLanguage('en', this)">English</button>
+    <button class="lang-btn" data-lang="es" onclick="setLanguage('es', this)">Español</button>
+    <button class="lang-btn" data-lang="so" onclick="setLanguage('so', this)">Soomaali</button>
+    <button class="lang-btn" data-lang="hmn" onclick="setLanguage('hmn', this)">Hmoob</button>
+    <button class="lang-btn" data-lang="am" onclick="setLanguage('am', this)">አማርኛ</button>
+    <button class="lang-btn" data-lang="om" onclick="setLanguage('om', this)">Oromoo</button>
+    <button class="lang-btn" data-lang="vi" onclick="setLanguage('vi', this)">Tiếng Việt</button>
+    <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru', this)">Русский</button>
+    <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar', this)">العربية</button>
+    <div id="google_translate_element" aria-label="More languages"></div>
+  </div>
+</nav>
+
+<header>
+  <p class="property-eyebrow">Dahcotah View Apartments</p>
+  <h1>Maintenance Work Order</h1>
+  <p class="property-sub">1601 &amp; 1605 E. Cliff Road &middot; Burnsville, Minnesota</p>
+</header>
+
+<nav class="site-nav" aria-label="Site pages">
+  <div class="site-nav-inner">
+    <a href="index.html">Notice Board</a>
+    <a href="workorder.html" class="current">Submit a Work Order</a>
+  </div>
+</nav>
+
+<main>
+  <div class="emergency-box">
+    <strong>EMERGENCY?</strong> For fire, call 911. For flooding, gas smell, no heat in winter, or lockouts, <strong>call the leasing office directly</strong> — do not use this form. Online work orders are reviewed during business hours.
+  </div>
+
+  <div class="form-card">
+    <h2>Request a Repair</h2>
+    <p class="form-intro">Complete the form below and our maintenance team will be notified. You will receive a copy at the email address you provide. Fields marked <span style="color:var(--emergency)">*</span> are required.</p>
+
+    <!-- IMPORTANT: Replace YOUR-EMAIL@EXAMPLE.COM below with the office email
+         address where you want work orders delivered. -->
+    <form action="https://formsubmit.co/YOUR-EMAIL@EXAMPLE.COM" method="POST">
+      <input type="hidden" name="_subject" value="NEW WORK ORDER — Dahcotah View">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://dahcotahview.github.io/Building-Updates/thanks.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <label for="name">Full Name <span class="req">*</span></label>
+      <input type="text" id="name" name="Resident Name" required>
+
+      <div class="two-col">
+        <div>
+          <label for="building">Building <span class="req">*</span></label>
+          <select id="building" name="Building" required>
+            <option value="">Select...</option>
+            <option value="1601 E. Cliff Road">1601 E. Cliff Road</option>
+            <option value="1605 E. Cliff Road">1605 E. Cliff Road</option>
+          </select>
+        </div>
+        <div>
+          <label for="unit">Unit Number <span class="req">*</span></label>
+          <input type="text" id="unit" name="Unit Number" required>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <label for="phone">Phone <span class="req">*</span></label>
+          <input type="tel" id="phone" name="Phone" required>
+        </div>
+        <div>
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <input type="hidden" name="_cc" value="">
+      <input type="hidden" name="_autoresponse" value="Thank you — your work order for Dahcotah View Apartments has been received. Our maintenance team will follow up. If this is an emergency, please call the leasing office.">
+
+      <label for="category">Type of Issue <span class="req">*</span></label>
+      <select id="category" name="Issue Type" required>
+        <option value="">Select...</option>
+        <option>Plumbing / Leak</option>
+        <option>Electrical</option>
+        <option>Heating / Cooling</option>
+        <option>Appliance</option>
+        <option>Doors / Locks / Keys</option>
+        <option>Pest Control</option>
+        <option>Common Area / Grounds</option>
+        <option>Other</option>
+      </select>
+
+      <label>Permission to Enter if You Are Not Home? <span class="req">*</span></label>
+      <div class="radio-row">
+        <label><input type="radio" name="Permission to Enter" value="Yes" required> Yes</label>
+        <label><input type="radio" name="Permission to Enter" value="No"> No — contact me first</label>
+      </div>
+
+      <label>Pets in the Unit?</label>
+      <div class="radio-row">
+        <label><input type="radio" name="Pets in Unit" value="Yes"> Yes</label>
+        <label><input type="radio" name="Pets in Unit" value="No"> No</label>
+      </div>
+
+      <label for="description">Describe the Problem <span class="req">*</span></label>
+      <textarea id="description" name="Description" placeholder="Please include where the problem is (kitchen, bathroom, bedroom, etc.) and how long it has been happening." required></textarea>
+
+      <button type="submit" class="submit-btn">Submit Work Order</button>
+      <p class="fine-print">Submissions are timestamped and sent directly to property management.</p>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <strong>Dahcotah View Apartments</strong> &middot; Managed by Wallingford Properties<br>
+  Leasing Office: 1601 E. Cliff Road, Burnsville, MN
+</footer>
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: "en",
+      autoDisplay: false,
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, "google_translate_element");
+  }
+  function setLanguage(code, btn) {
+    const expire = "Thu, 01 Jan 1970 00:00:00 UTC";
+    document.cookie = "googtrans=; path=/; expires=" + expire;
+    document.cookie = "googtrans=; path=/; domain=" + location.hostname + "; expires=" + expire;
+    document.cookie = "googtrans=; path=/; domain=." + location.hostname + "; expires=" + expire;
+    if (code !== "en") document.cookie = "googtrans=/en/" + code + "; path=/";
+    location.reload();
+  }
+  (function markActiveLanguage() {
+    const match = document.cookie.match(/googtrans=\/en\/([a-zA-Z-]+)/);
+    const active = match ? match[1] : "en";
+    document.querySelectorAll(".lang-btn").forEach(b => {
+      b.classList.toggle("active", b.dataset.lang === active);
+    });
+  })();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+</body>
+</html>
