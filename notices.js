@@ -38,7 +38,7 @@ const NOTICES = [
   {
     date: "2026-07-14",
     title: "WATER SHUT-OFF NOTICE",
-    category: "Parking",
+    category: "IMPORTANT",
     pinned: false,
     body: `
       <p>Dear Residents,
