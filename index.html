@@ -400,29 +400,30 @@
     }, "google_translate_element");
   }
 
+  // Language switching works by setting the "googtrans" cookie that
+  // Google Translate reads on page load, then refreshing the page.
+  // This is the most reliable method across all browsers and phones.
   function setLanguage(code, btn) {
-    document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
-    if (btn) btn.classList.add("active");
+    const expire = "Thu, 01 Jan 1970 00:00:00 UTC";
+    // Clear any existing translation cookie first
+    document.cookie = "googtrans=; path=/; expires=" + expire;
+    document.cookie = "googtrans=; path=/; domain=" + location.hostname + "; expires=" + expire;
+    document.cookie = "googtrans=; path=/; domain=." + location.hostname + "; expires=" + expire;
 
-    if (code === "en") {
-      // Reset translation by clearing the googtrans cookie and reloading
-      document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-      document.cookie = "googtrans=; path=/; domain=" + location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-      location.reload();
-      return;
+    if (code !== "en") {
+      document.cookie = "googtrans=/en/" + code + "; path=/";
     }
-
-    const trySelect = (attempts) => {
-      const combo = document.querySelector(".goog-te-combo");
-      if (combo) {
-        combo.value = code;
-        combo.dispatchEvent(new Event("change"));
-      } else if (attempts > 0) {
-        setTimeout(() => trySelect(attempts - 1), 300);
-      }
-    };
-    trySelect(15);
+    location.reload();
   }
+
+  // On load: highlight the button matching the active translation cookie
+  (function markActiveLanguage() {
+    const match = document.cookie.match(/googtrans=\/en\/([a-zA-Z-]+)/);
+    const active = match ? match[1] : "en";
+    document.querySelectorAll(".lang-btn").forEach(b => {
+      b.classList.toggle("active", b.dataset.lang === active);
+    });
+  })();
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 </body>
