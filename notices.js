@@ -36,52 +36,27 @@ const NOTICES = [
     `,
   },
   {
-    date: "2026-07-14",
-    title: "WATER SHUT-OFF NOTICE",
-    category: "IMPORTANT",
+    date: "2026-07-10",
+    title: "Example: Water Shut-Off — Building 1605",
+    category: "Maintenance",
     pinned: false,
     body: `
-      <p>Dear Residents,
-      
-WATER SHUT-OFF--TOMMOROW 7/15/2026
-We wanted to notify residents as soon as we were able that a large boiler room project has been scheduled for tomorrow, which will require the building's water to be temporarily shut off.
-Water service will be unavailable from approximately 7:30 AM to 2:00 PM. While we anticipate the work may be completed earlier, we wanted to provide the latest estimated timeframe so you can plan your day accordingly.
-We understand this may be an inconvenience and sincerely appreciate your patience and understanding as this important building maintenance is completed.
-Thank you,
-Management
-
-the number listed above.
-</p>
+      <p>This is a sample notice so you can see how the archive works. Replace or delete it when you post your first real notice.</p>
       <ul>
-        <li>Date: Wednesday, July 15</li>
-        <li>Time: 7:30 AM – 2:00 PM</li>
-        <li>Affected: All units in Building 1601 and 1605</li>
+        <li>Date: Thursday, July 10</li>
+        <li>Time: 9:00 AM – 1:00 PM</li>
+        <li>Affected: All units in Building 1605</li>
       </ul>
       <p>We appreciate your patience while our team completes this work.</p>
     `,
   },
   {
     date: "2026-07-01",
-    title: "Important Parking Reminders",
+    title: "Example: Guest Parking Reminder",
     category: "Parking",
     pinned: false,
     body: `
-      <p>Dear Residents,
-
-Due to recent activity in the parking lot, we would like to remind residents of the following information. We also want to ensure that parking is available for all residents and to help maintain an orderly community, in accordance with the last notice dated 6.24.26 (please refer back to notice for more information regarding parking) please follow the parking rules and regulations below:
-
-Guest parking is for guests only. Resident vehicles are not permitted to park in the designated guest parking area located in the back row, where signs indicate "Guest Parking Only." Any resident vehicle parked in these spaces is subject to immediate towing at the owner's expense.
-
-Residents with garage permits must park in the garage. If you have been assigned a garage parking space, you are expected to use your designated garage space.
-Surface parking is limited. Surface lot spaces are reserved exclusively for residents who have been issued surface lot permits.
-
-Permit Color Designations:
-Green Garage Permit: Park only in your assigned garage space.
-Orange Surface Lot Permit: Park only in designated surface lot spaces.
-
-Please also note: Please use the entire resident parking lot. If the spaces closest to your apartment are full, please check other areas of the lot, as resident spaces may still be available. While it may require a slightly longer walk, utilizing all available resident parking helps ensure guest parking remains available for guests and improves parking for everyone.
-Your cooperation helps ensure that parking remains fair and accessible for everyone in our community. Thank you for following these parking rules. If you have any questions, please don’t hesitate to contact the office at the number listed above.
-</p>
+      <p>This is a second sample notice. Guest vehicles must park in marked guest stalls only. Vehicles parked in reserved resident stalls or fire lanes may be towed at the owner's expense.</p>
     `,
   },
 ];
