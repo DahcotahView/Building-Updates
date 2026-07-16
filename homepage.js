@@ -21,7 +21,7 @@
 
 const OFFICE_STATUS = {
   todaysHours: "9:00 AM – 4:00 PM",
-  status: "closed",
+  status: "The office is closed",
   backAt: "Friday, 7/17 at 9:00 AM",
   note: "Office Closure Thursday 7/16",
 };
