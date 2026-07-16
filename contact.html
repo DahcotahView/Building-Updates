@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Send a question or inquiry to the Dahcotah View Apartments office.">
+<title>Contact the Office — Dahcotah View Apartments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+<nav class="lang-bar" aria-label="Translate this page">
+  <div class="lang-bar-inner">
+    <span class="lang-label">Translate</span>
+    <button class="lang-btn" data-lang="en" onclick="setLanguage('en', this)">English</button>
+    <button class="lang-btn" data-lang="es" onclick="setLanguage('es', this)">Español</button>
+    <button class="lang-btn" data-lang="so" onclick="setLanguage('so', this)">Soomaali</button>
+    <button class="lang-btn" data-lang="hmn" onclick="setLanguage('hmn', this)">Hmoob</button>
+    <button class="lang-btn" data-lang="am" onclick="setLanguage('am', this)">አማርኛ</button>
+    <button class="lang-btn" data-lang="om" onclick="setLanguage('om', this)">Oromoo</button>
+    <button class="lang-btn" data-lang="vi" onclick="setLanguage('vi', this)">Tiếng Việt</button>
+    <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru', this)">Русский</button>
+    <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar', this)">العربية</button>
+    <div id="google_translate_element" aria-label="More languages"></div>
+  </div>
+</nav>
+
+<header class="site-header">
+  <p class="property-eyebrow">Dahcotah View Apartments</p>
+  <h1>Contact the Office</h1>
+  <p class="property-sub">1601 &amp; 1605 E. Cliff Road &middot; Burnsville, Minnesota</p>
+</header>
+
+<nav class="site-nav" aria-label="Site pages">
+  <div class="site-nav-inner">
+    <a href="index.html">Home</a>
+    <a href="notices.html">Notices</a>
+    <a href="workorder.html">Work Orders</a>
+    <a href="parking.html">Parking</a>
+    <a href="partyroom.html">Party Room</a>
+    <a href="rentbox.html">Rent Drop Box</a>
+    <a href="community.html">Community</a>
+    <a href="contact.html" class="current">Contact</a>
+  </div>
+</nav>
+
+<main class="portal-main portal-narrow">
+  <p class="intro-note">Have a question for the office? Send it here any time, day or night. We review inquiries during business hours (Monday–Friday, 9:00 AM – 4:00 PM) and will get back to you as soon as we can.</p>
+
+  <div class="section-heading"><h2>Send Us a Message</h2></div>
+  <div class="card">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="60f2de74-e0a8-41ec-82ff-78d8443c3d2e">
+      <input type="hidden" name="from_name" value="Office Inquiry">
+      <input type="hidden" name="subject" value="Office Inquiry">
+      <input type="hidden" name="redirect" value="https://dahcotahview.github.io/Building-Updates/thanks.html">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1">
+      <label for="c-name">Full Name <span class="req">*</span></label>
+      <input type="text" id="c-name" name="Resident Name" required>
+      <div class="two-col">
+        <div>
+          <label for="c-bldg">Building</label>
+          <select id="c-bldg" name="Building">
+            <option value="">Select (if resident)...</option>
+            <option>1601 E. Cliff Road</option>
+            <option>1605 E. Cliff Road</option>
+            <option>Not a current resident</option>
+          </select>
+        </div>
+        <div>
+          <label for="c-unit">Unit Number</label>
+          <input type="text" id="c-unit" name="Unit Number">
+        </div>
+      </div>
+      <div class="two-col">
+        <div>
+          <label for="c-phone">Phone <span class="req">*</span></label>
+          <input type="tel" id="c-phone" name="Phone" required>
+        </div>
+        <div>
+          <label for="c-email">Email <span class="req">*</span></label>
+          <input type="email" id="c-email" name="email" required>
+        </div>
+      </div>
+      <label for="c-topic">Topic <span class="req">*</span></label>
+      <select id="c-topic" name="Topic" required>
+        <option value="">Select...</option>
+        <option>General question</option>
+        <option>Rent / payments</option>
+        <option>Lease question</option>
+        <option>Amenities</option>
+        <option>Interested in living at Dahcotah View</option>
+        <option>Other</option>
+      </select>
+      <label for="c-msg">Your Question or Message <span class="req">*</span></label>
+      <textarea id="c-msg" name="Message" required></textarea>
+      <button type="submit" class="submit-btn">Send Message</button>
+      <p class="fine-print">Messages go directly to the Dahcotah View office. For maintenance issues, please use the Work Orders page instead.</p>
+    </form>
+  </div>
+
+  <div class="callout-red" style="margin-top:22px"><strong>Emergency?</strong> Don't use this form. For fire, call 911. For urgent maintenance emergencies, call our emergency maintenance line at <strong>952-994-3502</strong>.</div>
+</main>
+
+<footer class="site-footer">
+  <strong>Dahcotah View Apartments</strong> &middot; Managed by Wallingford Properties<br>
+  Leasing Office: 1601 E. Cliff Road, Burnsville, MN<br>
+  <span class="gold">One portal for notices, maintenance, and community information.</span>
+</footer>
+
+<script src="portal.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+</body>
+</html>

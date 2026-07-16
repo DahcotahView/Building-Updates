@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reserve the Dahcotah View community party room for your next celebration.">
+<title>Party Room — Dahcotah View Apartments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+<nav class="lang-bar" aria-label="Translate this page">
+  <div class="lang-bar-inner">
+    <span class="lang-label">Translate</span>
+    <button class="lang-btn" data-lang="en" onclick="setLanguage('en', this)">English</button>
+    <button class="lang-btn" data-lang="es" onclick="setLanguage('es', this)">Español</button>
+    <button class="lang-btn" data-lang="so" onclick="setLanguage('so', this)">Soomaali</button>
+    <button class="lang-btn" data-lang="hmn" onclick="setLanguage('hmn', this)">Hmoob</button>
+    <button class="lang-btn" data-lang="am" onclick="setLanguage('am', this)">አማርኛ</button>
+    <button class="lang-btn" data-lang="om" onclick="setLanguage('om', this)">Oromoo</button>
+    <button class="lang-btn" data-lang="vi" onclick="setLanguage('vi', this)">Tiếng Việt</button>
+    <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru', this)">Русский</button>
+    <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar', this)">العربية</button>
+    <div id="google_translate_element" aria-label="More languages"></div>
+  </div>
+</nav>
+
+<header class="site-header">
+  <p class="property-eyebrow">Dahcotah View Apartments</p>
+  <h1>Party Room Requests</h1>
+  <p class="property-sub">1601 &amp; 1605 E. Cliff Road &middot; Burnsville, Minnesota</p>
+</header>
+
+<nav class="site-nav" aria-label="Site pages">
+  <div class="site-nav-inner">
+    <a href="index.html">Home</a>
+    <a href="notices.html">Notices</a>
+    <a href="workorder.html">Work Orders</a>
+    <a href="parking.html">Parking</a>
+    <a href="partyroom.html" class="current">Party Room</a>
+    <a href="rentbox.html">Rent Drop Box</a>
+    <a href="community.html">Community</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<main class="portal-main portal-narrow">
+  <p class="intro-note" style="font-size:17px">🎉 Something to celebrate? We love that for you! Our community party room is here for birthdays, graduations, showers, game days, and every festive occasion in between.</p>
+
+  <div class="section-heading"><h2>How It Works</h2></div>
+  <div class="card">
+    <p>Before you submit your request, here's the important part: there is a <strong>$200 refundable deposit</strong> due before receiving the party room access keys. Here's the full process from request to celebration:</p>
+    <ul class="steps">
+      <li><strong>Request your date</strong> using the form below.</li>
+      <li><strong>Management reviews</strong> your request and confirms the date is available.</li>
+      <li><strong>Stop by the office</strong> at a time we set up together to sign our <strong>Party Room Policy Agreement</strong> — our room usage rules that keep the space respectful and ready for the next celebration.</li>
+      <li><strong>Before your party date</strong>, bring a check written out for <strong>$200</strong> as the room deposit. <strong>Checks only — NOT cash.</strong></li>
+      <li><strong>Get your keys!</strong> We'll arrange to provide the room keys the day of or the day before your requested party day — the Friday before, if your party falls on a weekend.</li>
+      <li><strong>Celebrate, then get your deposit back.</strong> Upon respectful usage of the room — no damage and no violations of the signed agreement — your deposit check is returned to you promptly.</li>
+    </ul>
+  </div>
+
+  <div class="section-heading"><h2>Request the Party Room</h2></div>
+  <div class="card">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="60f2de74-e0a8-41ec-82ff-78d8443c3d2e">
+      <input type="hidden" name="from_name" value="Party Room Request">
+      <input type="hidden" name="subject" value="Party Room Request">
+      <input type="hidden" name="redirect" value="https://dahcotahview.github.io/Building-Updates/thanks.html">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1">
+      <label for="p-name">Full Name <span class="req">*</span></label>
+      <input type="text" id="p-name" name="Resident Name" required>
+      <div class="two-col">
+        <div>
+          <label for="p-bldg">Building <span class="req">*</span></label>
+          <select id="p-bldg" name="Building" required>
+            <option value="">Select...</option>
+            <option>1601 E. Cliff Road</option>
+            <option>1605 E. Cliff Road</option>
+          </select>
+        </div>
+        <div>
+          <label for="p-unit">Unit Number <span class="req">*</span></label>
+          <input type="text" id="p-unit" name="Unit Number" required>
+        </div>
+      </div>
+      <div class="two-col">
+        <div>
+          <label for="p-phone">Phone <span class="req">*</span></label>
+          <input type="tel" id="p-phone" name="Phone" required>
+        </div>
+        <div>
+          <label for="p-email">Email <span class="req">*</span></label>
+          <input type="email" id="p-email" name="email" required>
+        </div>
+      </div>
+      <div class="two-col">
+        <div>
+          <label for="p-date">Requested Date <span class="req">*</span></label>
+          <input type="date" id="p-date" name="Requested Date" required>
+        </div>
+        <div>
+          <label for="p-guests">Approximate Guest Count</label>
+          <input type="text" id="p-guests" name="Guest Count" placeholder="e.g., 20">
+        </div>
+      </div>
+      <label for="p-occasion">What's the Occasion? 🎈</label>
+      <input type="text" id="p-occasion" name="Occasion" placeholder="Birthday, graduation, baby shower, family gathering...">
+      <label for="p-notes">Anything Else We Should Know?</label>
+      <textarea id="p-notes" name="Notes"></textarea>
+      <button type="submit" class="submit-btn">Request the Party Room 🎉</button>
+      <p class="fine-print">We'll review your request and reach out to schedule your office visit and agreement signing.</p>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <strong>Dahcotah View Apartments</strong> &middot; Managed by Wallingford Properties<br>
+  Leasing Office: 1601 E. Cliff Road, Burnsville, MN<br>
+  <span class="gold">One portal for notices, maintenance, and community information.</span>
+</footer>
+
+<script src="portal.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+</body>
+</html>

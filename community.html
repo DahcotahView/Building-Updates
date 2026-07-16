@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A kind, moderated neighbor-to-neighbor board for Dahcotah View residents — giveaways, food shares, and community heads-ups.">
+<title>Community Board — Dahcotah View Apartments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+<nav class="lang-bar" aria-label="Translate this page">
+  <div class="lang-bar-inner">
+    <span class="lang-label">Translate</span>
+    <button class="lang-btn" data-lang="en" onclick="setLanguage('en', this)">English</button>
+    <button class="lang-btn" data-lang="es" onclick="setLanguage('es', this)">Español</button>
+    <button class="lang-btn" data-lang="so" onclick="setLanguage('so', this)">Soomaali</button>
+    <button class="lang-btn" data-lang="hmn" onclick="setLanguage('hmn', this)">Hmoob</button>
+    <button class="lang-btn" data-lang="am" onclick="setLanguage('am', this)">አማርኛ</button>
+    <button class="lang-btn" data-lang="om" onclick="setLanguage('om', this)">Oromoo</button>
+    <button class="lang-btn" data-lang="vi" onclick="setLanguage('vi', this)">Tiếng Việt</button>
+    <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru', this)">Русский</button>
+    <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar', this)">العربية</button>
+    <div id="google_translate_element" aria-label="More languages"></div>
+  </div>
+</nav>
+
+<header class="site-header">
+  <p class="property-eyebrow">Dahcotah View Apartments</p>
+  <h1>Community Board</h1>
+  <p class="property-sub">1601 &amp; 1605 E. Cliff Road &middot; Burnsville, Minnesota</p>
+</header>
+
+<nav class="site-nav" aria-label="Site pages">
+  <div class="site-nav-inner">
+    <a href="index.html">Home</a>
+    <a href="notices.html">Notices</a>
+    <a href="workorder.html">Work Orders</a>
+    <a href="parking.html">Parking</a>
+    <a href="partyroom.html">Party Room</a>
+    <a href="rentbox.html">Rent Drop Box</a>
+    <a href="community.html" class="current">Community</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<main class="portal-main">
+  <p class="intro-note">A friendly space for neighbors — give away furniture, share extra food, post a lost-and-found, or give the community a helpful heads-up. Kindness required, negativity not accepted.</p>
+
+  <div class="callout-gold"><strong>How this board works:</strong> submitted posts are <strong>reviewed by property management before appearing</strong> here — usually within a business day or two. Posts must be kind, helpful, and neighborly. Anything negative, hateful, or targeting a neighbor or staff member will not be published. Have a concern or complaint? We genuinely want to hear it — bring it to us directly through the <a href="contact.html" style="color:#7a6212; font-weight:700">Contact page</a> where we can actually help, rather than the community board where we can't.</div>
+
+  <div class="section-heading"><h2>Community Posts</h2></div>
+  <section id="community-posts"><!-- filled by script from community.js --></section>
+
+  <div class="section-heading"><h2>Submit a Post</h2></div>
+  <div class="card">
+    <p>Posts are not anonymous to management — we ask for your name, unit, and contact so we can reach you and keep this board safe and accountable. Your personal details are <strong>never published</strong> unless you choose to display contact info on your post.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="60f2de74-e0a8-41ec-82ff-78d8443c3d2e">
+      <input type="hidden" name="from_name" value="Community Board Post">
+      <input type="hidden" name="subject" value="Community Board Post Submission">
+      <input type="hidden" name="redirect" value="https://dahcotahview.github.io/Building-Updates/thanks.html">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1">
+      <label for="cb-name">Full Name <span class="req">*</span> <span style="font-weight:500; color:var(--ink-soft)">(kept private unless you choose to display contact info)</span></label>
+      <input type="text" id="cb-name" name="Resident Name" required>
+      <div class="two-col">
+        <div>
+          <label for="cb-bldg">Building <span class="req">*</span></label>
+          <select id="cb-bldg" name="Building" required>
+            <option value="">Select...</option>
+            <option>1601 E. Cliff Road</option>
+            <option>1605 E. Cliff Road</option>
+          </select>
+        </div>
+        <div>
+          <label for="cb-unit">Unit Number <span class="req">*</span></label>
+          <input type="text" id="cb-unit" name="Unit Number" required>
+        </div>
+      </div>
+      <label for="cb-email">Your Email or Phone <span class="req">*</span> <span style="font-weight:500; color:var(--ink-soft)">(so management can reach you about your post)</span></label>
+      <input type="text" id="cb-email" name="Contact for Management" required>
+      <label for="cb-cat">Category <span class="req">*</span></label>
+      <select id="cb-cat" name="Category" required>
+        <option value="">Select...</option>
+        <option>Furniture &amp; Household Giveaway</option>
+        <option>Food Share / Donation</option>
+        <option>Community Awareness / Heads-Up</option>
+        <option>Lost &amp; Found</option>
+        <option>Neighborly Ask / Other</option>
+      </select>
+      <label for="cb-title">Post Title <span class="req">*</span></label>
+      <input type="text" id="cb-title" name="Post Title" required placeholder="e.g., Free couch — good condition!">
+      <label for="cb-msg">Your Post <span class="req">*</span></label>
+      <textarea id="cb-msg" name="Post Message" required placeholder="Keep it kind and neighborly. Example: Giving away a gently used dining table, first come first served. Available for pickup this weekend."></textarea>
+      <label for="cb-contact">Contact Info to Display on the Post (optional)</label>
+      <input type="text" id="cb-contact" name="Public Contact Info" placeholder="Leave blank to have neighbors reach you through the office">
+      <p class="fine-print" style="text-align:left; margin-top:10px">📷 <strong>Have a photo of your item?</strong> Mention it in your post, or email it to DVABurnsville@gmail.com with your post title — we can include it when your post is published.</p>
+      <button type="submit" class="submit-btn">Submit for Review</button>
+      <p class="fine-print">Your post will be reviewed by management before it appears on this page.</p>
+    </form>
+    <p class="form-blocked" id="kindness-block">Let's keep it neighborly! 💛 Your post contains language that doesn't fit our community board. Please reword it kindly — and if you have a concern or complaint, please bring it to us directly through the Contact page so we can help.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <strong>Dahcotah View Apartments</strong> &middot; Managed by Wallingford Properties<br>
+  Leasing Office: 1601 E. Cliff Road, Burnsville, MN<br>
+  <span class="gold">One portal for notices, maintenance, and community information.</span>
+</footer>
+
+<script src="community.js"></script>
+<script>
+  // ---------- Render approved posts ----------
+  (function renderPosts() {
+    const el = document.getElementById("community-posts");
+    const posts = (typeof COMMUNITY_POSTS !== "undefined") ? [...COMMUNITY_POSTS] : [];
+    if (!posts.length) {
+      el.innerHTML = '<div class="card"><p>No posts yet — be the first! Submit one below and it will appear here once approved.</p></div>';
+      return;
+    }
+    posts.sort((a, b) => b.date.localeCompare(a.date));
+    el.innerHTML = posts.map(p => {
+      const d = new Date(p.date + "T12:00:00");
+      const dateStr = d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+      return `<div class="post-card">
+        <div class="post-meta">
+          <span class="post-tag">${p.category}</span>
+          <span class="post-date">${dateStr}</span>
+        </div>
+        <h3>${p.title}</h3>
+        ${p.image ? `<img class="post-photo" src="${p.image}" alt="Photo for ${p.title}">` : ""}
+        <p class="post-body">${p.body}</p>
+        <p class="post-by">Posted by ${p.by}</p>
+        ${p.contact ? `<p class="post-contact">Contact: ${p.contact}</p>` : ""}
+      </div>`;
+    }).join("");
+  })();
+
+  // ---------- Kindness filter ----------
+  // First-pass filter: blocks clearly negative, hostile, or unkind language
+  // from even being submitted. Management review is the final safeguard —
+  // every post is still approved by hand before publishing.
+  const BLOCKED_PATTERN = new RegExp("\\b(" + [
+    "hate", "hateful", "stupid", "idiot", "idiots", "dumb", "moron", "loser", "losers",
+    "pathetic", "worthless", "useless", "disgusting", "trash", "garbage", "lazy",
+    "incompetent", "slumlord", "scam", "scammer", "fraud", "liar", "liars", "lying",
+    "racist", "sexist", "ugly", "gross", "shut up", "screw you", "screw them",
+    "kill", "hurt", "revenge", "threat", "threaten", "violence", "violent",
+    "sick of", "fed up", "worst", "terrible", "awful", "horrible", "nasty",
+    "damn", "dammit", "crap", "crappy", "hell no", "pissed", "piss", "sucks", "suck",
+    "shit", "bullshit", "fuck", "fucking", "fucked", "bitch", "bitches", "asshole",
+    "fck", "fk", "fuk", "fkn", "fckn", "fcking", "sht", "btch", "bs", "ahole", "azz",
+    "bastard", "dick", "wtf", "stfu"
+  ].join("|") + ")\\b", "i");
+
+  document.querySelector("#community-posts") && (function attachFilter() {
+    const form = document.querySelector('form[action*="web3forms"]');
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      const title = (document.getElementById("cb-title") || {}).value || "";
+      const msg = (document.getElementById("cb-msg") || {}).value || "";
+      const combined = (title + " " + msg).toLowerCase().replace(/[*@$!.,_-]/g, "");
+      const blockNote = document.getElementById("kindness-block");
+      if (BLOCKED_PATTERN.test(title + " " + msg) || BLOCKED_PATTERN.test(combined)) {
+        e.preventDefault();
+        blockNote.style.display = "block";
+        blockNote.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        blockNote.style.display = "none";
+      }
+    });
+  })();
+</script>
+<script src="portal.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+</body>
+</html>
