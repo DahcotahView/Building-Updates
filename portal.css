@@ -1,0 +1,107 @@
+/* Dahcotah View Resident Portal — shared styles for portal pages */
+:root {
+  --navy: #14263f; --navy-deep: #0c1a2e; --navy-soft: #22385c;
+  --gold: #c9a227; --gold-bright: #e0bc4a; --gold-pale: #f3e8c4;
+  --paper: #f7f5ef; --card: #ffffff; --ink: #1c2431; --ink-soft: #55617a;
+  --line: #e2ddd0; --green: #2e7d4f; --green-pale: #e3f0e8;
+  --red: #a83232; --red-pale: #fdf1f1;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.65; top: 0 !important; }
+.goog-te-banner-frame, .skiptranslate iframe.skiptranslate { display: none !important; }
+body > .skiptranslate { display: none !important; }
+
+/* Language bar */
+.lang-bar { position: sticky; top: 0; z-index: 50; background: var(--navy-deep); border-bottom: 3px solid var(--gold); padding: 10px 16px; }
+.lang-bar-inner { max-width: 860px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.lang-label { color: var(--gold-bright); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-right: 4px; }
+.lang-btn { background: transparent; border: 1px solid rgba(224,188,74,0.45); color: #f2eee2; font-family: inherit; font-size: 13px; font-weight: 500; padding: 5px 12px; border-radius: 999px; cursor: pointer; }
+.lang-btn:hover { background: var(--navy-soft); border-color: var(--gold-bright); }
+.lang-btn.active { background: var(--gold); border-color: var(--gold); color: var(--navy-deep); font-weight: 700; }
+#google_translate_element { margin-left: auto; }
+#google_translate_element .goog-te-gadget { font-size: 0; color: transparent; }
+#google_translate_element select { font-family: inherit; font-size: 13px; padding: 5px 8px; border-radius: 6px; border: 1px solid rgba(224,188,74,0.45); background: var(--navy-soft); color: #f2eee2; max-width: 170px; }
+
+/* Header */
+header.site-header { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%); color: #f2eee2; padding: 40px 20px 32px; text-align: center; position: relative; }
+header.site-header::after { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 120px; height: 4px; background: var(--gold); }
+.property-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 10px; }
+header.site-header h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(28px, 6vw, 40px); line-height: 1.15; }
+.property-sub { margin-top: 10px; font-size: 14px; color: #c4cddc; }
+
+/* Nav */
+.site-nav { background: var(--navy); border-bottom: 3px solid var(--gold); }
+.site-nav-inner { max-width: 860px; margin: 0 auto; display: flex; flex-wrap: wrap; }
+.site-nav a { color: #dfe5ee; text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 11px 14px; letter-spacing: 0.02em; }
+.site-nav a:hover { background: var(--navy-soft); color: var(--gold-bright); }
+.site-nav a.current { background: var(--gold); color: var(--navy-deep); }
+
+main.portal-main { max-width: 860px; margin: 0 auto; padding: 32px 16px 64px; }
+main.portal-narrow { max-width: 700px; }
+
+.section-heading { display: flex; align-items: center; gap: 12px; margin: 34px 0 16px; }
+.section-heading h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 22px; color: var(--navy); white-space: nowrap; }
+.section-heading::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+.card { background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--gold); border-radius: 10px; padding: 26px 24px; box-shadow: 0 2px 14px rgba(20,38,63,0.07); }
+.card h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 20px; color: var(--navy); margin-bottom: 10px; }
+.card p { margin-bottom: 12px; font-size: 15px; }
+.card p:last-child { margin-bottom: 0; }
+.card ul { margin: 0 0 12px 22px; font-size: 15px; }
+.card li { margin-bottom: 6px; }
+
+.intro-note { text-align: center; font-size: 16px; color: var(--ink-soft); max-width: 640px; margin: 0 auto 8px; }
+
+/* FAQ / on-this-page box */
+.faq-box { background: var(--gold-pale); border: 1px solid #e0d3a0; border-radius: 10px; padding: 20px 22px; margin-top: 24px; }
+.faq-box-title { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #7a6212; margin-bottom: 10px; }
+.faq-box ul { list-style: none; }
+.faq-box li { padding: 6px 0 6px 24px; font-size: 15px; font-weight: 600; color: var(--navy); position: relative; }
+.faq-box li::before { content: "◆"; color: var(--gold); position: absolute; left: 2px; font-size: 11px; top: 10px; }
+
+/* Callout variants */
+.callout-red { background: var(--red-pale); border: 1px solid #e6b8b8; border-left: 5px solid var(--red); border-radius: 8px; padding: 16px 18px; margin: 18px 0; font-size: 14.5px; }
+.callout-red strong { color: var(--red); }
+.callout-green { background: var(--green-pale); border: 1px solid #b8d4c2; border-left: 5px solid var(--green); border-radius: 8px; padding: 16px 18px; margin: 18px 0; font-size: 14.5px; }
+.callout-green strong { color: var(--green); }
+.callout-gold { background: var(--gold-pale); border: 1px solid #e0d3a0; border-left: 5px solid var(--gold); border-radius: 8px; padding: 16px 18px; margin: 18px 0; font-size: 14.5px; }
+.callout-gold strong { color: #7a6212; }
+
+/* Forms */
+form label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin: 16px 0 5px; letter-spacing: 0.02em; }
+form label .req { color: var(--red); }
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], select, textarea {
+  width: 100%; font-family: inherit; font-size: 15px; padding: 10px 12px;
+  border: 1px solid #cfc9ba; border-radius: 6px; background: #fdfcf9; color: var(--ink);
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); border-color: var(--gold); }
+textarea { min-height: 110px; resize: vertical; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 520px) { .two-col { grid-template-columns: 1fr; } }
+.radio-row { display: flex; gap: 18px; margin-top: 6px; font-size: 15px; flex-wrap: wrap; }
+.radio-row label { display: flex; align-items: center; gap: 6px; font-weight: 500; margin: 0; color: var(--ink); }
+.submit-btn { display: block; width: 100%; margin-top: 26px; background: var(--navy); color: var(--gold-bright); font-family: inherit; font-size: 16px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px; border: none; border-radius: 8px; cursor: pointer; }
+.submit-btn:hover { background: var(--navy-soft); }
+.fine-print { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; text-align: center; }
+.form-blocked { display: none; margin-top: 14px; padding: 14px; border-radius: 6px; background: var(--red-pale); border: 1px solid #e6b8b8; color: var(--red); font-size: 14px; text-align: center; font-weight: 600; }
+
+/* Steps list */
+.steps { counter-reset: step; list-style: none; margin: 0 !important; }
+.steps li { counter-increment: step; position: relative; padding: 12px 0 12px 52px; border-bottom: 1px dashed var(--line); margin: 0 !important; }
+.steps li:last-child { border-bottom: none; }
+.steps li::before { content: counter(step); position: absolute; left: 4px; top: 12px; width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: var(--gold-bright); font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+
+/* Community posts */
+.post-card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; margin-bottom: 12px; }
+.post-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 8px; }
+.post-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; background: var(--gold-pale); color: #7a6212; }
+.post-date { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); }
+.post-card h3 { font-family: "Fraunces", Georgia, serif; font-size: 19px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.post-body { font-size: 15px; margin-bottom: 8px; }
+.post-by { font-size: 13px; color: var(--ink-soft); font-style: italic; }
+.post-contact { font-size: 13.5px; margin-top: 6px; font-weight: 600; color: var(--navy); }
+.post-photo { max-width: 100%; border-radius: 8px; margin: 10px 0; border: 1px solid var(--line); }
+
+footer.site-footer { background: var(--navy-deep); color: #aab6c9; text-align: center; font-size: 13px; padding: 26px 16px; line-height: 1.8; margin-top: 40px; }
+footer.site-footer strong { color: #f2eee2; }
+footer.site-footer .gold { color: var(--gold-bright); }
