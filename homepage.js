@@ -21,7 +21,7 @@
 
 const OFFICE_STATUS = {
   todaysHours: "9:00 AM – 4:00 PM",
-  status: "available",
+  status: "unavailable",
   backAt: "",
   note: "",
 };
