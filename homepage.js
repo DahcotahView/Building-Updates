@@ -21,9 +21,9 @@
 
 const OFFICE_STATUS = {
   todaysHours: "9:00 AM – 4:00 PM",
-  status: "closed",
-  backAt: "9:00 AM on Friday, 7/17",
-  note: "Office closure on Thursday, 7/16",
+  status: "available",
+  backAt: "",
+  note: "",
 };
 
 /* ---------- THIS WEEK AT DAHCOTAH VIEW ----------
