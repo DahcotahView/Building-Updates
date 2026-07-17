@@ -23,7 +23,7 @@ const OFFICE_STATUS = {
   todaysHours: "9:00 AM – 4:00 PM",
   status: "available",
   backAt: "",
-  note: "",
+  note: "In office--Come on by! Happy Friday!",
 };
 
 /* ---------- THIS WEEK AT DAHCOTAH VIEW ----------
