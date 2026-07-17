@@ -21,9 +21,9 @@
 
 const OFFICE_STATUS = {
   todaysHours: "9:00 AM – 4:00 PM",
-  status: "unavailable",
-  backAt: "3:00 PM",
-  note: "Happy Friday! We are wrapping up apartment inspections right now. We are not in the office right now.",
+  status: "closed",
+  backAt: "Monday 7/20 at 9 AM",
+  note: "We will be back on Monday. Please note that next week we will be more limited in the office than normal due to increased inspection time. Next week, we will be strictly by appointment only for any resident meetings. Please request appointment in the contact page.",
 };
 
 /* ---------- THIS WEEK AT DAHCOTAH VIEW ----------
