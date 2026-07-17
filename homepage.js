@@ -21,9 +21,9 @@
 
 const OFFICE_STATUS = {
   todaysHours: "9:00 AM – 4:00 PM",
-  status: "available",
-  backAt: "",
-  note: "In office--Come on by! Happy Friday!",
+  status: "unavailable",
+  backAt: "3:00 PM",
+  note: "Happy Friday! We are wrapping up apartment inspections right now. We are not in the office right now.",
 };
 
 /* ---------- THIS WEEK AT DAHCOTAH VIEW ----------
