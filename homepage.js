@@ -32,11 +32,11 @@ const OFFICE_STATUS = {
    you only write what is happening each day.               */
 
 const THIS_WEEK = [
-  "Our new wave of camera installations went in around the building for added security.",
-  "Reinforcement and reminders of parking rules.",
-  "Building and apartment inspections.",
-  "Office closed.",
-  "Continuation of building and apartment inspections.",
+  "Continuing Inspections",
+  "Continuing Inspections",
+  "More availability in office through the end of the week! Appointment based only for larger concerns and inquiries.",
+  "Maintenance and Reinspections",
+  "Maintenance and Reinspections",
 ];
 
 /* ---------- UPCOMING ----------
@@ -45,11 +45,11 @@ const THIS_WEEK = [
 const UPCOMING = [
   {
     when: "July 30",
-    what: "City inspections will occur again for all apartments that received a notice indicating they will be revisited.",
+    what: "City inspections will occur again for all apartments that received a management inspection.",
   },
   {
     when: "In the coming days",
-    what: "We may have temporary water shut-offs for parts of some days as we complete a project on the water valves in the boiler room. Watch the Notices page for exact dates and times.",
+    what: "We will be scheduling reinspections for those that need to be revisited.",
   },
   {
     when: "Very soon",
