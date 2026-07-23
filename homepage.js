@@ -21,7 +21,7 @@
 
 const OFFICE_STATUS = {
   todaysHours: "9:00 AM – 4:00 PM",
-  status: "unavailable",
+  status: "available",
   backAt: "",
   note: "Please note that this week we will be more limited in the office than normal due to increased inspection time. This week, we will be strictly by appointment only for any resident meetings. Please request appointment in the contact page.",
 };
